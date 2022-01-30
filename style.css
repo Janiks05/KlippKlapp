@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    height: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+html,body{
+    max-width: 100%;
+    overflow-x: hidden;
+    height:auto!important;
+}
+body{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.playarea{
+    background-color: #e28743;
+    margin: auto;
+    margin-top: 20px;
+    width: 95vw;
+    height: 53vh;
+    border: 10px solid #e28743;
+    border-radius: 5px;
+}
+.cubes{
+    display: flex;
+}
+.cubes button{
+    border: none;
+    color: black;
+}
+.num{
+    background-color: brown;
+    border-radius: 5px;
+    margin-left: auto;
+    width: 10vw;
+    height: 20vh;
+    margin-bottom: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.num h1{
+    color: rgb(0, 0, 0);
+    font-size: 4rem;
+    margin-top: 40%;
+    cursor: pointer;
+}
+.dices{
+    margin: auto;
+    background-image: linear-gradient(rgb(0, 93, 0), green);
+    border-radius: 5px;
+    width: 99%;
+    height: 30vh;
+}
+.dice{
+    width: 90px;
+    height: 12vh;
+    background-color: white;
+    border: 1px solid rgb(66, 66, 66);
+    font-size: 3rem;
+    text-align: center;
+    
+}
+#dice1{
+    color: black;
+    margin-left: 10%;
+}
+#dice2{
+    margin-left: 20vw;
+    color: black;
+    transform: rotate(340deg)
+}
+.dicerotate{
+    transform: rotate(360deg);
+    transition-duration: 500ms;
+}
+.dicebutton{
+    margin-top: 10vh;
+    text-align: center;
+}
+.dicebutton button{
+    width: auto;
+    height: 9vh;
+    background-color: sandybrown;
+    color: black;
+    font-size: 2rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 5px;
+}
+.dicebutton button:active{
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.clapped{
+    background-color: rgb(32, 32, 32);
+    transform: rotate(360deg);
+    transition-duration: 300ms;
+    
+}
+.score{
+    color: rgb(255, 255, 255);
+}
+
+.diceit1{
+    animation-name: diceing1;
+    animation-duration: 0.5s;
+}
+.diceit2{
+    animation-name: diceing2;
+    animation-duration: 0.4s;
+    transform: rotate(340deg)
+}
+.navbuttons{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5vh;
+}
+.navbuttons button{
+    width: auto;
+    height: 9vh;
+    background-color: rgb(0, 131, 131);
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 5px;
+}
+
+@keyframes diceing1{
+    from{transform: rotate(0deg);
+    margin-left: 80%;}
+    to{transform: rotate(360deg);
+    margin-left: 10%;}
+}
+@keyframes diceing2{
+    from{transform: rotate(0deg);
+        margin-left: 85%;}
+        to{
+            margin-left: 20%;
+        }
+}
+
+@media screen and (max-height: 470px) {
+    .num{
+        height: auto;
+    }
+    .num h1{
+        margin-top: 0%;
+    }
+    .dices{
+        display: flex;
+    }
+    .dice{
+        height: 15vh;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    .dicebutton button{
+        width: auto;
+        height: 15vh;
+    }
+}

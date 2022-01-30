@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="./manifest.json">
+    <title>Klipp Klapp Mobile</title>
+</head>
+
+<body>
+    <main id="main">
+        <div class="playarea">
+            <div class="cubes">
+                <button class="num" id="1">
+                    <h1>1</h1>
+                </button>
+                <button class="num" id="2">
+                    <h1>2</h1>
+                </button>
+                <button class="num" id="3">
+                    <h1>3</h1>
+                </button>
+                <button class="num" id="4">
+                    <h1>4</h1>
+                </button>
+                <button class="num" id="5">
+                    <h1>5</h1>
+                </button>
+                <button class="num" id="6">
+                    <h1>6</h1>
+                </button>
+                <button class="num" id="7">
+                    <h1>7</h1>
+                </button>
+                <button class="num" id="8">
+                    <h1>8</h1>
+                </button>
+                <button class="num" id="9">
+                    <h1>9</h1>
+                </button>
+            </div>
+
+            <div class="dices">
+                <div class="dice" id="dice1"></div>
+                <div class="dice" id="dice2"></div>
+            </div>
+        </div>
+
+        <div class="dicebutton">
+            <button onclick="dice()">Würfeln</button>
+        </div>
+        <div class="navbuttons">
+            <button id="ready" onclick="ready()">Neue Runde</button>
+            <button id="new" onclick="newGame()">Neues Spiel</button>
+        </div>
+        <div class="score">
+            <h1 id="score"></h1>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <h1 id="mainScore">SPIELSTAND: </h1>
+        <!--Table with values-->
+    </footer>
+
+
+</body>
+<script src="script.js"></script>
+<script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./sw.js');
+        });
+    }
+</script>
+
+</html>
