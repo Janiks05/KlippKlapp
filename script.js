@@ -102,7 +102,7 @@ function keyPush(evt) {
 
 for (let j = 1; j < localStorage.length; j++) {
     // Create a p element:
-    const para = document.createElement("p");
+    const para = document.createElement("li");
     const h = document.createElement('h1')
 
     // Create a text node:
